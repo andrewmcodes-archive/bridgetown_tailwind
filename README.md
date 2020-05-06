@@ -29,3 +29,35 @@ yarn start
 ```
 
 You can now view your site live at http://localhost:4000/
+
+### Tailwind
+
+```sh
+yarn add -D tailwindcss postcss-import postcss-loader
+./node_modules/.bin/tailwind init
+```
+
+```
+{
+  test: /\.(s[ac]|c)ss$/,
+  use: [
+    {
+      loader: "postcss-loader",
+      options: {
+        ident: "postcss",
+        plugins: [
+          require("postcss-import"),
+          require("tailwindcss"),
+          require("autoprefixer"),
+        ],
+      },
+    },
+  ],
+},
+```
+
+```css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+```

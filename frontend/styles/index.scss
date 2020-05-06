@@ -1,17 +1,3 @@
-$body-background: #fafafa;
-$body-color: #444;
-
-body {
-  background: $body-background;
-  color: $body-color;
-  font-family: sans-serif;
-}
-
-h1, nav, footer {
-  text-align: center;
-}
-
-main {
-  margin: 4rem auto;
-  max-width: 60rem;
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
