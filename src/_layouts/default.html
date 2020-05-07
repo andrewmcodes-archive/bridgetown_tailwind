@@ -3,13 +3,11 @@
   <head>
     {% include head.html %}
   </head>
-  <body class="{{ page.layout }} {{ page.page_class }}">
+  <body class="min-h-screen {{ page.layout }} {{ page.page_class }}">
     {% include navbar.html %}
 
     <main class="text-gray-700">
-      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col bg-red-500">
-        {{ content }}
-      </div>
+      {{ content }}
     </main>
 
     {% include footer.html %}

@@ -157,16 +157,72 @@ This step is optional but we can update some of our styles if we want.
 
 Here is what I did:
 
+```css
+// frontend/styles/index.scss
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+```
+
+```html
+<!-- src/_layouts/default.html -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="min-h-screen {{ page.layout }} {{ page.page_class }}">
+    {% include navbar.html %}
+
+    <main class="text-gray-700">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
+
+```
+
 ```html
 <!-- src/_layouts/home.html -->
 ---
 layout: default
 ---
 
-<h1 class="mb-4 text-6xl text-white">Home Page</h1>
+<div class="w-full px-5 py-12 bg-red-500">
+  <h1 class="mb-4 text-6xl text-white">Home</h1>
+</div>
 
-<div class="text-2xl text-center text-gray-100">
-  {{ content }}
+<div class="mx-auto">
+  <div class="px-5 py-12">
+    {{ content }}
+  </div>
+</div>
+```
+
+```html
+<!-- src/_layouts/page.html & src/_layouts/post.html -->
+---
+layout: default
+---
+
+<div class="w-full px-5 py-12 bg-red-500">
+  <h1 class="mb-4 text-6xl text-white">{{ page.title }}</h1>
+</div>
+
+<div class="mx-auto">
+  <div class="px-5 py-12">
+    {{ content }}
+  </div>
 </div>
 ```
 
@@ -191,11 +247,11 @@ layout: default
 ```html
 <!-- src/_includes/footer.html -->
 
-<footer class="text-gray-700 body-font">
+<footer class="text-white bg-red-500 body-font">
   <div class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row">
-    <p class="mt-4 text-sm text-gray-500 sm:py-2 sm:mt-0">© 2020 Andrew Mason</p>
+    <p class="mt-4 text-sm sm:py-2 sm:mt-0">© 2020 Andrew Mason</p>
     <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
-      <a class="ml-3 text-gray-500" href="https://twitter.com/andrewmcodes">
+      <a class="ml-3" href="https://twitter.com/andrewmcodes">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
           <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
         </svg>
