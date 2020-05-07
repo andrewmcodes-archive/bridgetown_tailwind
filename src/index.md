@@ -5,3 +5,5 @@ layout: home
 ---
 
 Welcome to Bridgetown!
+
+This is an example Bridgetown site using TailwindCSS!
