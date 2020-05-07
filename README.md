@@ -2,6 +2,8 @@
 [contributing]: /CONTRIBUTING.md
 [license]: /LICENSE.md
 
+![header image](./docs/images/header.jpg)
+
 # Bridgetown + TailwindCSS
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2cd7d245-da99-45bd-98fc-5b393eaeac32/deploy-status)](https://app.netlify.com/sites/bridgetown-tailwind/deploys)
