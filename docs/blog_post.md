@@ -1,4 +1,23 @@
-## Instructions
+# Bridgetown + TailwindCSS
+
+- [Demo Repository](https://github.com/andrewmcodes/bridgetown_tailwind)
+- [Demo Website](https://bridgetown-tailwind.netlify.app)
+
+## What is Bridgetown
+
+According to their [website](https://www.bridgetownrb.com), Bridgetown is:
+
+> A Webpack-aware, Ruby-powered static site generator for the modern Jamstack era.
+
+You may think of JavaScript when you hear the term "static site generator", but one of the oldest, and most popular static site generators is Jekyll, and it is also built with Ruby. The Jekyll project is over 10 years old, and remains a popular tool. Bridgetown seems to be a fresh take on Jekyll, and brings a nice balance of Ruby and JavaScript.
+
+It is also worth pointing out that Bridgetown is pre version 1.0 at the time of writing. The stability notice on their README is worth keeping in mind:
+
+>Given Bridgetown's strong inherited bones (see background below) and our continued emphasis on good testing, we're pretty confident Bridgetown is ready to use today. But…you might want to exercise a bit of extra caution using this in production. 🙂 We are already (after all, the Bridgetown website is built with Bridgetown), but YMMV.
+
+## Tutorial
+
+Let's create our first static site with Bridgetown!
 
 ### Prerequisites
 
@@ -203,3 +222,11 @@ If you added these styles, your homepage should now look like:
 7. Click `Deploy site`
 
 Your site will deploy and you should be able to view it at the preview link that Netlify provides!
+
+## Summary
+
+If you have had Ruby/Rails/Jekyll experience, you should feel right at home with Bridgetown. Bridgetown also removes the barrier to entry for integrating webpack and all the goodies the JavaScript community has to offer.
+
+Even though the library is still pre 1.0, I think it would still be worth your time to check out [Bridgetown](https://www.bridgetownrb.com) and see what you think!
+
+Happy coding!
