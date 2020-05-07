@@ -263,18 +263,18 @@ layout: default
 
 If you added these styles, your homepage should now look like:
 
-![homepage](./images/homepage.jpg)
+![homepage](https://dev-to-uploads.s3.amazonaws.com/i/l8p4oi78c2w1b11lesjz.jpg)
 
 ### Deployment with Netlify
 
 1. Login to Netlify
 2. Select `New Site from Git`
-![homepage](./images/netlify_new_site.jpg)
+![Netlify - New Site](https://dev-to-uploads.s3.amazonaws.com/i/pemhv37uf4tq74pr7x4r.jpg)
 3. Choose your Git provider
 4. Select your repo
 5. Set your `Build Command` to `yarn deploy`
 6. Set your `Publish directory` to `output/`
-![homepage](./images/netlify_settings.jpg)
+![Netlify - Deploy Settings](https://dev-to-uploads.s3.amazonaws.com/i/7eao24kpdn9l776nidwm.jpg)
 7. Click `Deploy site`
 
 Your site will deploy and you should be able to view it at the preview link that Netlify provides!
@@ -284,5 +284,7 @@ Your site will deploy and you should be able to view it at the preview link that
 If you have had Ruby/Rails/Jekyll experience, you should feel right at home with Bridgetown. Bridgetown also removes the barrier to entry for integrating webpack and all the goodies the JavaScript community has to offer.
 
 Even though the library is still pre 1.0, I think it would still be worth your time to check out [Bridgetown](https://www.bridgetownrb.com) and see what you think!
+
+You can find the code for this tutorial [here](https://github.com/andrewmcodes/bridgetown_tailwind) or view [demo](https://bridgetown-tailwind.netlify.app).
 
 Happy coding!
