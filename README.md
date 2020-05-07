@@ -1,75 +1,67 @@
-# README
+[coc]: /CODE_OF_CONDUCT.md
+[contributing]: /CONTRIBUTING.md
+[license]: /LICENSE.md
 
-## Instructions
+# Bridgetown + TailwindCSS
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2cd7d245-da99-45bd-98fc-5b393eaeac32/deploy-status)](https://app.netlify.com/sites/bridgetown-tailwind/deploys)
+
+A Bridgetown blog with TailwindCSS
+
+## Installation
 
 ### Prerequisites
 
-Make sure you have Ruby and Node installed
+Make sure you have Ruby, Bundler, Node, and Yarn installed.
 
 ```sh
 ➜ ruby -v
 ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-darwin19]
 
+➜ bundler -v
+Bundler version 2.1.4
+
 ➜ node -v
 v13.11.0
+
+➜ yarn -v
+1.22.4
 ```
 
-### Install gem
+### Clone
 
 ```sh
-gem install bundler bridgetown -N
-```
-
-### Create new project
-
-```sh
-bridgetown new bridgetown_tailwind
+git clone https://github.com/andrewmcodes/bridgetown_tailwind.git
 cd bridgetown_tailwind
+bundle install && yarn install
+```
+
+### Start
+
+To start the blog, run:
+
+```sh
 yarn start
 ```
 
-You can now view your site live at http://localhost:4000/
+and navigate to `http://localhost:4000`.
 
-### Tailwind
+## Deployment
 
-```sh
-yarn add -D tailwindcss postcss-import postcss-loader
-./node_modules/.bin/tailwind init
-```
+### Netlify
 
-```
-{
-  test: /\.(s[ac]|c)ss$/,
-  use: [
-    {
-      loader: "postcss-loader",
-      options: {
-        ident: "postcss",
-        plugins: [
-          require("postcss-import"),
-          require("tailwindcss"),
-          require("autoprefixer"),
-        ],
-      },
-    },
-  ],
-},
-```
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/andrewmcodes/bridgetown_tailwind)
 
-```css
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-```
+## Community
 
-### Deployment with Netlify
+### Contributing
 
-1. Login to Netlify
-2. Select `New Site from Git`
-3. Choose your Git provider
-4. Select your repo
-5. Set your `Build Command` to `yarn deploy`
-6. Set your `Publish directory` to `output/`
-7. Click `Deploy site`
+[Contributing Guide][contributing]
 
-Your site will deploy and you should be able to view it at the preview link that Netlify provides!
+### Code of Conduct
+
+[Code of Conduct][coc]
+
+### License
+
+[MIT][license]
