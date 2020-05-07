@@ -59,7 +59,7 @@ Let's add TailwindCSS to our new site:
 
 ```sh
 yarn add -D tailwindcss postcss-import postcss-loader
-./node_modules/.bin/tailwind init
+yarn tailwind init
 ```
 
 This will create a `tailwind.config.js` file at the root of our directory.
