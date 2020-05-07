@@ -61,3 +61,15 @@ yarn add -D tailwindcss postcss-import postcss-loader
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 ```
+
+### Deployment with Netlify
+
+1. Login to Netlify
+2. Select `New Site from Git`
+3. Choose your Git provider
+4. Select your repo
+5. Set your `Build Command` to `yarn deploy`
+6. Set your `Publish directory` to `output/`
+7. Click `Deploy site`
+
+Your site will deploy and you should be able to view it at the preview link that Netlify provides!
